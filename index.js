@@ -35,7 +35,7 @@ app.get('/',function(req,res){
      responseStr = '';
 
      results.forEach(function(data){
-        responseStr += data.ITEM_NAME + ' : ';
+        responseStr += data.name + ' : ';
         console.log(data);
      });
 
