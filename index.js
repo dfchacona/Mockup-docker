@@ -7,11 +7,11 @@ var responseStr = "MySQL Data:";
 
 app.get('/',function(req,res){
    
-   var mysqlHost = process.env.MYSQL_HOST || 'localhost';
+   var mysqlHost = process.env.MYSQL_HOST || 'us-cdbr-east-05.cleardb.net';
    var mysqlPort = process.env.MYSQL_PORT || '3306';
-   var mysqlUser = process.env.MYSQL_USER || 'root';
-   var mysqlPass = process.env.MYSQL_PASS || 'root';
-   var mysqlDB   = process.env.MYSQL_DB   || 'node_db';
+   var mysqlUser = process.env.MYSQL_USER || 'b8f88d8cdb6474';
+   var mysqlPass = process.env.MYSQL_PASS || 'd5c390a2';
+   var mysqlDB   = process.env.MYSQL_DB   || 'heroku_d5f316cf2827a1a';
 
    var connectionOptions = {
      host: mysqlHost,
@@ -25,7 +25,7 @@ app.get('/',function(req,res){
    console.log(connectionOptions);
 
    var connection = mysql.createConnection(connectionOptions);
-   var queryStr = "SELECT * FROM MOE_ITEM_T";
+   var queryStr = "SELECT * FROM ingredients";
    
    connection.connect();
  
